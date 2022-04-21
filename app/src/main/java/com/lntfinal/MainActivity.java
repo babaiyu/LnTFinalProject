@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
-            Log.d("USER", "There is current user!");
             Toast.makeText(MainActivity.this, "There is current user!", Toast.LENGTH_LONG).show();
         } else {
             Toast.makeText(MainActivity.this, "You must login before use this App", Toast.LENGTH_LONG).show();

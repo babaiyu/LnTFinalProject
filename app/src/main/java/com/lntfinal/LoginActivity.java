@@ -2,6 +2,8 @@ package com.lntfinal;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBar;
@@ -12,6 +14,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
+    private EditText inputEmail, inputPassword;
+    private Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +27,17 @@ public class LoginActivity extends AppCompatActivity {
             String title = "Login";
             actionBar.setTitle(title);
         }
+
+        inputEmail = findViewById(R.id.inputEmail);
+        inputPassword = findViewById(R.id.inputPassword);
+        btnLogin = findViewById(R.id.btnLogin);
+
+        btnLogin.setOnClickListener(view -> {
+            String email = inputEmail.getText().toString();
+            String password = inputPassword.getText().toString();
+//            Toast.makeText(LoginActivity.this, email + password, Toast.LENGTH_SHORT).show();
+            signIn(email, password);
+        });
 
         mAuth = FirebaseAuth.getInstance();
     }
@@ -41,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                         Log.d("EmailAndPassword", "Success Login");
                         FirebaseUser user = mAuth.getCurrentUser();
                         Log.d("EmailAndPassword", user.getEmail());
+                        finish();
                     } else {
                         String errorMessage = task.getException().getMessage();
                         Log.w("EmailAndPassword", errorMessage);

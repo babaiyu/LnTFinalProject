@@ -67,12 +67,13 @@
                 android:text="Email" />
 
             <EditText
-                android:id="@+id/inputEmail"
+                android:id="@+id/inEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:hint="Input Email"
                 android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
                 android:minHeight="48dp" />
 
             <TextView

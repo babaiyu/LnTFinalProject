@@ -5,24 +5,43 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.lntfinal.data.UserData;
 
 public class MainActivity extends AppCompatActivity {
-    private DatabaseReference mDatabase;
+    NavigationBarView navigationBarView;
+
+    CounterFragment counterFragment = new CounterFragment();
+    CalculatorFragment calculatorFragment = new CalculatorFragment();
+    VolumeFragment volumeFragment = new VolumeFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference();
+        openFragment(counterFragment);
 
-//        exampleWrite("abc123", "mamank", "mamank@mail.com");
+        navigationBarView = findViewById(R.id.bottom_navigation);
+        navigationBarView.setSelectedItemId(R.id.page_1);
+        navigationBarView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.page_1:
+                    openFragment(counterFragment);
+                    return true;
+                case R.id.page_2:
+                    openFragment(calculatorFragment);
+                    return true;
+                case R.id.page_3:
+                    openFragment(volumeFragment);
+                    return true;
+            }
+            return false;
+        });
     }
 
     @Override
@@ -38,8 +57,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void exampleWrite(String id_bimbel, String name, String email) {
-        UserData user = new UserData(id_bimbel, name, email);
-        mDatabase.child("example").child(id_bimbel).setValue(user);
+    public void openFragment(Fragment fragment) {
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.replace(R.id.main_fragment, fragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }

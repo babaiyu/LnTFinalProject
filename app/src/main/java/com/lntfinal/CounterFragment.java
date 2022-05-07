@@ -12,8 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import java.util.Objects;
-
 public class CounterFragment extends Fragment {
     static final String COUNTER = "COUNTER";
     Integer counter = 0;
@@ -33,6 +31,7 @@ public class CounterFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        setHasOptionsMenu(true);
         View v = inflater.inflate(R.layout.fragment_counter, container, false);
         idCounter = v.findViewById(R.id.idCounter);
         btnLess = v.findViewById(R.id.btnLess);

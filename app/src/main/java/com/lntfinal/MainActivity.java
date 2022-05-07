@@ -2,6 +2,8 @@ package com.lntfinal;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,10 +16,10 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
     NavigationBarView navigationBarView;
-
     CounterFragment counterFragment = new CounterFragment();
     CalculatorFragment calculatorFragment = new CalculatorFragment();
     VolumeFragment volumeFragment = new VolumeFragment();
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
             }
             return false;
         });
+
+        mAuth = FirebaseAuth.getInstance();
     }
 
     @Override
@@ -55,6 +59,23 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.logout_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.btnLogout) {
+            mAuth.signOut();
+            Toast.makeText(MainActivity.this, "Signing Out", Toast.LENGTH_SHORT).show();
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     public void openFragment(Fragment fragment) {

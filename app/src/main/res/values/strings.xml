@@ -1,3 +1,69 @@
 <resources>
     <string name="app_name">LnT Final</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas fringilla phasellus faucibus scelerisque. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit lectus. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Vitae purus faucibus ornare suspendisse sed nisi lacus sed. Consectetur adipiscing elit pellentesque habitant morbi tristique senectus. Convallis posuere morbi leo urna. Semper auctor neque vitae tempus. Facilisis sed odio morbi quis. Velit sed ullamcorper morbi tincidunt ornare massa. Ullamcorper a lacus vestibulum sed arcu non odio euismod. Condimentum lacinia quis vel eros donec. Elementum integer enim neque volutpat ac tincidunt. Cras pulvinar mattis nunc sed. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Maecenas ultricies mi eget mauris pharetra et.
+
+Quis blandit turpis cursus in. Porttitor lacus luctus accumsan tortor posuere ac ut consequat. Habitant morbi tristique senectus et netus et malesuada fames ac. Aliquet porttitor lacus luctus accumsan. Sit amet consectetur adipiscing elit pellentesque. Hendrerit dolor magna eget est lorem ipsum dolor. Enim nunc faucibus a pellentesque sit amet porttitor eget. Ut venenatis tellus in metus vulputate eu scelerisque felis. Pretium lectus quam id leo in vitae turpis massa. Laoreet non curabitur gravida arcu ac. Convallis a cras semper auctor neque vitae. Aliquam eleifend mi in nulla posuere sollicitudin.
+
+Nisl rhoncus mattis rhoncus urna neque. Orci nulla pellentesque dignissim enim sit amet venenatis urna. Nec feugiat nisl pretium fusce id velit ut. Vivamus arcu felis bibendum ut tristique et egestas. Condimentum vitae sapien pellentesque habitant morbi tristique senectus. Eget arcu dictum varius duis at consectetur lorem donec massa. Laoreet id donec ultrices tincidunt. Enim facilisis gravida neque convallis. Malesuada bibendum arcu vitae elementum curabitur vitae nunc sed. Adipiscing tristique risus nec feugiat in fermentum. Tincidunt praesent semper feugiat nibh sed pulvinar proin. Pretium vulputate sapien nec sagittis aliquam malesuada. Malesuada fames ac turpis egestas maecenas. Laoreet suspendisse interdum consectetur libero id faucibus. Ultricies leo integer malesuada nunc vel. Lacus suspendisse faucibus interdum posuere. Cursus metus aliquam eleifend mi.
+
+Donec ultrices tincidunt arcu non sodales. Etiam tempor orci eu lobortis elementum nibh tellus molestie. Velit euismod in pellentesque massa placerat duis ultricies. Dictum non consectetur a erat nam at lectus. Interdum consectetur libero id faucibus nisl. Est sit amet facilisis magna etiam. Non arcu risus quis varius quam quisque id. Gravida dictum fusce ut placerat orci nulla pellentesque. Duis at consectetur lorem donec. Dui faucibus in ornare quam viverra orci sagittis. Mi in nulla posuere sollicitudin aliquam ultrices sagittis orci a. Tempor orci eu lobortis elementum nibh tellus molestie. Urna nec tincidunt praesent semper feugiat nibh sed. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Quis ipsum suspendisse ultrices gravida dictum. Amet nisl purus in mollis nunc. Et netus et malesuada fames. Amet nisl suscipit adipiscing bibendum est ultricies integer quis. Pharetra sit amet aliquam id diam maecenas ultricies mi eget. Arcu bibendum at varius vel pharetra vel.
+
+Mauris a diam maecenas sed enim ut sem viverra. Imperdiet proin fermentum leo vel orci porta non. Augue eget arcu dictum varius duis. Placerat in egestas erat imperdiet sed euismod nisi porta lorem. Lectus urna duis convallis convallis tellus id interdum. In fermentum et sollicitudin ac orci phasellus egestas tellus. Orci ac auctor augue mauris. Hac habitasse platea dictumst quisque. Habitant morbi tristique senectus et netus et malesuada fames. Scelerisque varius morbi enim nunc faucibus a pellentesque sit. Tincidunt nunc pulvinar sapien et ligula.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_create_an_account">Create an account</string>
+    <string name="scrollregister">scrollRegister</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_id_bimbel">ID Bimbel</string>
+    <string name="txt_input_bimbel">Input Bimbel</string>
+    <string name="txt_name">Name</string>
+    <string name="txt_input_name">Input Name</string>
+    <string name="txt_input_email">Input Email</string>
+    <string name="txt_input_password">Input Password</string>
+    <string name="txt_confirm_password">Confirm Password</string>
+    <string name="txt_input_confirm_password">Input Confirm Password</string>
+    <string name="txt_already_have_an_account_login_now">Already have an account? Login now</string>
+    <string name="txt_ini_counter">Ini Counter</string>
+    <string name="btn_reset">RESET</string>
+    <string name="btn_kurang">(-) Kurang</string>
+    <string name="btn_tambah">(+) Tambah</string>
+    <string name="txt_volume_calculator">Volume Calculator</string>
+    <string name="txt_panjang">Panjang</string>
+    <string name="txt_masukkan_panjang">Masukkan Panjang</string>
+    <string name="txt_lebar">Lebar</string>
+    <string name="txt_masukkan_lebar">Masukkan Lebar</string>
+    <string name="txt_tinggi">Tinggi</string>
+    <string name="txt_masukkan_tinggi">Masukkan Tinggi</string>
+    <string name="txt_luas_permukaan_segitiga">Luas Permukaan Segitiga</string>
+    <string name="txt_masukkan_luas_permukaan_segitiga">Masukkan Luas Permukaan Segitiga</string>
+    <string name="txt_jari_jari">Jari-jari</string>
+    <string name="txt_masukkan_jari_jari">Masukkan Jari-jari</string>
+    <string name="btn_hitung">Hitung</string>
+    <string name="txt_balok">Balok:</string>
+    <string name="txt_piramida">Piramida:</string>
+    <string name="txt_tabung">Tabung:</string>
+    <string name="txt_area_calculator">Area Calculator</string>
+    <string name="txt_sisi">Sisi</string>
+    <string name="txt_masukkan_panjang_sisi">Masukkan Panjang Sisi</string>
+    <string name="txt_alas">Alas</string>
+    <string name="txt_masukkan_luas_area">Masukkan Luas Area</string>
+    <string name="txt_persegi">Persegi:</string>
+    <string name="txt_segitiga">Segitiga:</string>
+    <string name="txt_lingkaran">Lingkaran:</string>
+    <string name="counter">Counter</string>
+    <string name="area">Area</string>
+    <string name="volume">Volume</string>
+    <string name="logout">Logout</string>
 </resources>

@@ -15,14 +15,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Area Calculator"
+            android:text="@string/txt_area_calculator"
             android:textSize="34sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Sisi"
+            android:text="@string/txt_sisi"
             android:textSize="24sp" />
 
         <EditText
@@ -30,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Masukkan Panjang Sisi"
+            android:hint="@string/txt_masukkan_panjang_sisi"
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:minHeight="48dp" />
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Alas"
+            android:text="@string/txt_alas"
             android:textSize="24sp" />
 
         <EditText
@@ -47,7 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Masukkan Luas Area"
+            android:hint="@string/txt_masukkan_luas_area"
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:minHeight="48dp" />
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Tinggi"
+            android:text="@string/txt_tinggi"
             android:textSize="24sp" />
 
         <EditText
@@ -64,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Masukkan Tinggi"
+            android:hint="@string/txt_tinggi"
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:minHeight="48dp" />
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Jari-jari"
+            android:text="@string/txt_jari_jari"
             android:textSize="24sp" />
 
         <EditText
@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Masukkan Panjang Jari-Jari"
+            android:hint="@string/txt_masukkan_jari_jari"
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:minHeight="48dp" />
@@ -91,25 +91,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Hitung" />
+            android:text="@string/btn_hitung" />
 
         <TextView
             android:id="@+id/txtRectangle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Persegi: " />
+            android:text="@string/txt_persegi" />
 
         <TextView
             android:id="@+id/txtTriangle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Segitiga: " />
+            android:text="@string/txt_segitiga" />
 
         <TextView
             android:id="@+id/txtCircle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lingkaran: " />
+            android:text="@string/txt_lingkaran" />
 
     </LinearLayout>
 </ScrollView>

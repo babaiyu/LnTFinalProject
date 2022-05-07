@@ -1,5 +1,6 @@
 package com.lntfinal;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -60,6 +61,7 @@ public class CounterFragment extends Fragment {
         return v;
     }
 
+    @SuppressLint("SetTextI18n")
     public void updateUI() {
         counter = storage.getInt("counter", 0);
         idCounter.setText("" + counter);

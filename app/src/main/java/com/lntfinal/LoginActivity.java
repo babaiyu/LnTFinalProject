@@ -16,10 +16,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Objects;
+
 public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private EditText inputEmail, inputPassword;
-    private TextView btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         inputEmail = findViewById(R.id.inputEmail);
         inputPassword = findViewById(R.id.inputPassword);
         Button btnLogin = findViewById(R.id.btnLogin);
-        btnRegister = findViewById(R.id.btnRegister);
+        TextView btnRegister = findViewById(R.id.btnRegister);
 
         btnLogin.setOnClickListener(view -> {
             String email = inputEmail.getText().toString();
@@ -69,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             finish();
                         } else {
-                            String errorMessage = task.getException().getMessage();
+                            String errorMessage = Objects.requireNonNull(task.getException()).getMessage();
                             Toast.makeText(LoginActivity.this, errorMessage, Toast.LENGTH_LONG).show();
                             inputPassword.setText("");
                         }

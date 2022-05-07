@@ -31,16 +31,17 @@ public class MainActivity extends AppCompatActivity {
         navigationBarView = findViewById(R.id.bottom_navigation);
         navigationBarView.setSelectedItemId(R.id.page_1);
         navigationBarView.setOnItemSelectedListener(item -> {
-            switch (item.getItemId()) {
-                case R.id.page_1:
-                    openFragment(counterFragment);
-                    return true;
-                case R.id.page_2:
-                    openFragment(calculatorFragment);
-                    return true;
-                case R.id.page_3:
-                    openFragment(volumeFragment);
-                    return true;
+            if (item.getItemId() == R.id.page_1) {
+                openFragment(counterFragment);
+                return true;
+            }
+            if (item.getItemId() == R.id.page_2) {
+                openFragment(calculatorFragment);
+                return true;
+            }
+            if (item.getItemId() == R.id.page_3) {
+                openFragment(volumeFragment);
+                return true;
             }
             return false;
         });
@@ -52,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            Toast.makeText(MainActivity.this, "There is current user!", Toast.LENGTH_LONG).show();
-        } else {
+        if (user == null) {
             Toast.makeText(MainActivity.this, "You must login before use this App", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);

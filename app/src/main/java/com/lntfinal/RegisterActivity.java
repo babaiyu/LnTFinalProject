@@ -22,8 +22,6 @@ public class RegisterActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
     private EditText inputBimbel, inputName, inputEmail, inputPassword, inputConfirmPassword;
-    private Button btnRegister;
-    private TextView btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
         inputEmail = findViewById(R.id.inEmail);
         inputPassword = findViewById(R.id.inputPassword);
         inputConfirmPassword = findViewById(R.id.inputConfirmPassword);
-        btnRegister = findViewById(R.id.btnRegister);
-        btnLogin = findViewById(R.id.btnLogin);
+        Button btnRegister = findViewById(R.id.btnRegister);
+        TextView btnLogin = findViewById(R.id.btnLogin);
 
         btnRegister.setOnClickListener(view -> {
             signUp(inputBimbel.getText().toString(),
@@ -94,15 +92,16 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             FirebaseUser currentUser = mAuth.getCurrentUser();
                             UserProfileChangeRequest profileUser = new UserProfileChangeRequest.Builder().setDisplayName(name).build();
-                            currentUser.updateProfile(profileUser).addOnCompleteListener(this, view -> {
-                                if (view.isSuccessful()) {
-                                    helpers.showToast(RegisterActivity.this, "Success Create Account");
-                                    finish();
-                                }
-                                else {
-                                    helpers.showToast(RegisterActivity.this, view.getException().getMessage());
-                                }
-                            });
+                            if (currentUser != null) {
+                                currentUser.updateProfile(profileUser).addOnCompleteListener(this, view -> {
+                                    if (view.isSuccessful()) {
+                                        helpers.showToast(RegisterActivity.this, "Success Create Account");
+                                        finish();
+                                    } else {
+                                        helpers.showToast(RegisterActivity.this, Objects.requireNonNull(view.getException()).getMessage());
+                                    }
+                                });
+                            }
                         } else {
                             String errorMessage = Objects.requireNonNull(task.getException()).getMessage();
                             helpers.showToast(RegisterActivity.this, errorMessage);

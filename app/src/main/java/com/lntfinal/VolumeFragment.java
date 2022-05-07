@@ -54,16 +54,16 @@ public class VolumeFragment extends Fragment {
 
     public void volumeBlock(Integer length, Integer wide, Integer tall) {
         block = (float) (length * wide * tall);
-        txtBlock.setText("Balok: " + block);
+        txtBlock.setText(String.format("Balok: %s", block));
     }
 
     public void volumePyramid(Integer base_area, Integer tall) {
         pyramid = (float) (base_area * tall) * 1 / 3;
-        txtPyramid.setText("Piramida: " + pyramid);
+        txtPyramid.setText(String.format("Piramida: %s", pyramid));
     }
 
     public void volumeTube(Integer radius, Integer tall) {
         tube = (float) (22 / 7 * (radius * radius) * tall);
-        txtTube.setText("Tabung: " + tube);
+        txtTube.setText(String.format("Tabung: %s", tube));
     }
 }

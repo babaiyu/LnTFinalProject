@@ -12,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import java.util.Objects;
+
 public class CounterFragment extends Fragment {
     static final String COUNTER = "COUNTER";
     Integer counter = 0;
@@ -37,7 +39,7 @@ public class CounterFragment extends Fragment {
         btnPlus = v.findViewById(R.id.btnPluss);
         btnReset = v.findViewById(R.id.btnReset);
 
-        storage = this.getActivity().getSharedPreferences(COUNTER, Context.MODE_PRIVATE);
+        storage = this.requireActivity().getSharedPreferences(COUNTER, Context.MODE_PRIVATE);
 
         updateUI();
 
